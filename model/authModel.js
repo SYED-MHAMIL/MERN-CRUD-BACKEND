@@ -4,7 +4,8 @@ const {Schema}  = mongoose
        name : String ,
        fullname :  String ,
        email : String ,
-       password : String                  
+       password : String,
+       emailVerified: { type: Boolean , default: false }                  
  })
 
  const  User=mongoose.model("Userpractise" , authshcema)
