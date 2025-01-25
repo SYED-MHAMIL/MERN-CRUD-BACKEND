@@ -19,6 +19,9 @@ import authMiddleware from './middleware/authMiddleware.js';
 app.use(cors('*'))
 app.use(express.json());
 app.use(bodyParser.urlencoded({extended : false}))
+app.get('/',()=>[
+      res.send('ok !')
+])
 app.use("/auth",authRouter)
 app.use("/tasks",authMiddleware,tasksRouter)
 

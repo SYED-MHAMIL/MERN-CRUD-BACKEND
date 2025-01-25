@@ -3,7 +3,7 @@ import express from "express"
 import Joi from "joi"
 import User from "../model/authModel.js"
 import dotenv from "dotenv"
-import  bcrypt from "bcrypt"
+import  bcrypt from "bcryptjs"
 import nodemailer from 'nodemailer'
 import sendRes from "../helper/sendResponse.js"
 import jwt from "jsonwebtoken"
