@@ -9,7 +9,10 @@ import authMiddleware from './middleware/authMiddleware.js';
  const app=express();
     dotenv.config();
 
-    mongoose.connect(process.env.DATABASE_URL)
+    mongoose.connect(process.env.DATABASE_URL).then(()=>{
+         console.log('database connected');
+    
+    })
     app.get("/",(req,res)=>{
                res.send("d hello ")
     })

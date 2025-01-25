@@ -4,7 +4,7 @@ import Joi from "joi"
 import User from "../model/authModel.js"
 import dotenv from "dotenv"
 import  bcrypt from "bcrypt"
-import nodemailer from "nodemailer";
+import nodemailer from 'nodemailer'
 import sendRes from "../helper/sendResponse.js"
 import jwt from "jsonwebtoken"
 const router = express.Router()
@@ -68,7 +68,7 @@ router.post("/register",async(req,res)=>{
           newUser.password =hashcode
     await  newUser.save()
      const userObj = newUser.toObject();
-    
+      
      delete userObj.password;
      
             const token = jwt.sign({...userObj},process.env.API_SECRET)
