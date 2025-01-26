@@ -4,7 +4,6 @@ import sendRes from "../helper/sendResponse.js"
 
 
    let router =express.Router()
-   
 
    router.post('/',async(req,res)=>{
                  

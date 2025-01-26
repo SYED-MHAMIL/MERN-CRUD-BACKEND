@@ -5,7 +5,8 @@ const {Schema}  = mongoose
        fullname :  String ,
        email : String ,
        password : String,
-       emailVerified: { type: Boolean , default: false }                  
+       emailVerified: { type: Boolean , default: false }  ,
+       role: { type: String, enum: ['admin', 'receptionist', 'department'], required: true }                
  })
 
  const  User=mongoose.model("Userpractise" , authshcema)
